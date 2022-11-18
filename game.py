@@ -21,8 +21,8 @@ class Game:
 
             try:
 
-                message = f"{self.first_player.name},
-                enter the position (1 - 9): "
+                message = f"{self.first_player.name},\
+                enter the position(1 - 9): "
                 position = int(input(message))
 
                 # the new_board() method return True if
@@ -32,7 +32,7 @@ class Game:
 
                     # checking winner each time after updating the board
                     if self.board.select_winner(self.first_player.type):
-                        print(f"{self.first_player.name}, wins! and
+                        print(f"{self.first_player.name}, wins! and \
                                 {self.second_player.name}, loses")
                         break
 
@@ -47,5 +47,5 @@ class Game:
                             self.first_player = self.player2
                         else:
                             self.first_player = self.player1
-            except:
+            except IndexError:
                 print("Invalid input! Enter a number between 1 and 9.")

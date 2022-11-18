@@ -37,11 +37,11 @@ class Board:
                 return True
 
             # if the position is already filled, ask user to select another
-            position
+            # position
             else:
                 print("Position has been selected. Select another position.")
                 return False
-        except:
+        except IndexError:
             print("Invalid position! Select another position.")
 
     def select_winner(self, type):
@@ -53,19 +53,19 @@ class Board:
         if (self.board[0] == type and self.board[1] == type and
                 self.board[2] == type) or \
            (self.board[3] == type and self.board[4] == type and
-                   self.board[5] == type) or \
+                self.board[5] == type) or \
            (self.board[6] == type and self.board[7] == type and
-                   self.board[8] == type) or \
+                self.board[8] == type) or \
            (self.board[0] == type and self.board[3] == type and
-                   self.board[6] == type) or \
+                self.board[6] == type) or \
            (self.board[1] == type and self.board[4] == type and
-                   self.board[7] == type) or \
+                self.board[7] == type) or \
            (self.board[2] == type and self.board[5] == type and
-                   self.board[8] == type) or \
+                self.board[8] == type) or \
            (self.board[0] == type and self.board[4] == type and
-                   self.board[8] == type) or \
+                self.board[8] == type) or \
            (self.board[2] == type and self.board[4] == type and
-                   self.board[6] == type):
+                self.board[6] == type):
             return True
         else:
             return False
