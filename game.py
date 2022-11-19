@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 '''Defines the class Game'''
-import player
-
+from board import Board
+from player import Player
 
 class Game:
     '''Initializes the class Game'''

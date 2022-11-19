@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 '''Defines the class Player'''
-import board
 
 
 class Player:
